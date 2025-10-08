@@ -1,0 +1,35 @@
+/* ✅ Phải để @import font và @import tailwind ở trên cùng */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+@import "tailwindcss";
+
+/* 🌿 Biến nền & màu chữ */
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+/* 🌞 Light mode mặc định */
+html,
+body {
+  background: transparent !important;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* 🌓 Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* ⚙️ Tailwind theme inline (nếu bạn thật sự cần) */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}

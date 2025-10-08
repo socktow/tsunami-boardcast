@@ -1,0 +1,88 @@
+{
+    "matchDetail": {
+      "gameTotal": 3,
+      "teamA_Score": 1,
+      "teamB_Score": 2,
+      "teamA_Name": "G2",
+      "teamB_Name": "Leviatan",
+      "teamA_Color": "#1E90FF",
+      "teamB_Color": "#FF4C4C",
+      "teamA_Logo": "/valorant/teamlogo/tsunami.png",
+      "teamB_Logo": "/valorant/teamlogo/studio.png",
+      "gameTime": 107,
+      "gameStatus": "running"
+    },
+    "mapPicked": "ASCENT",
+    "teamA": {
+      "name": "G2",
+      "side": "DEF",
+      "agents": [
+        {
+          "player": "Valyn",
+          "agent": "Iso",
+          "role": "Duelist",
+          "status": "picking"
+        },
+        {
+          "player": "Icy",
+          "agent": "Iso",
+          "role": "Duelist",
+          "status": "picking"
+        },
+        {
+          "player": "Trent",
+          "agent": "Clove",
+          "role": "Controller",
+          "status": "picking"
+        },
+        {
+          "player": "JonahP",
+          "agent": "Cypher",
+          "role": "Sentinel",
+          "status": "picking"
+        },
+        {
+          "player": "Leaf",
+          "agent": "Fade",
+          "role": "Initiator",
+          "status": "picking"
+        }
+      ]
+    },
+    "teamB": {
+      "name": "Leviatan",
+      "side": "ATK",
+      "agents": [
+        {
+          "player": "Kingg",
+          "agent": "",
+          "role": "",
+          "status": "picking"
+        },
+        {
+          "player": "aspas",
+          "agent": "",
+          "role": "",
+          "status": "picking"
+        },
+        {
+          "player": "tex",
+          "agent": "",
+          "role": "",
+          "status": "picking"
+        },
+        {
+          "player": "Mazino",
+          "agent": "",
+          "role": "",
+          "status": "picking"
+        },
+        {
+          "player": "COM",
+          "agent": "",
+          "role": "",
+          "status": "picking"
+        }
+      ]
+    }
+  }
