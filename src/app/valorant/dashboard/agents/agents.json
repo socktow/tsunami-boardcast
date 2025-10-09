@@ -6,6 +6,7 @@
   { "name": "Yoru", "role": "Duelist" },
   { "name": "Neon", "role": "Duelist" },
   { "name": "Iso", "role": "Duelist" },
+  { "name": "Waylay", "role": "Duelist" },
 
   { "name": "Brimstone", "role": "Controller" },
   { "name": "Omen", "role": "Controller" },
@@ -26,6 +27,5 @@
   { "name": "KAY_O", "role": "Initiator" },
   { "name": "Fade", "role": "Initiator" },
   { "name": "Gekko", "role": "Initiator" },
-  { "name": "Tejo", "role": "Initiator" },
-  { "name": "Waylay", "role": "Initiator" }
+  { "name": "Tejo", "role": "Initiator" }
 ]

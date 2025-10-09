@@ -233,7 +233,7 @@ export default function AgentPickPage() {
                       {pick.agent ? (
                         <>
                           <Image
-                            src={`/valorant/agents/${pick.agent}.png`}
+                            src={`/valorant/agents/${pick.agent}_icon.png`}
                             alt={pick.agent}
                             width={80}
                             height={80}

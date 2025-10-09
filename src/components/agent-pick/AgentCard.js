@@ -3,7 +3,14 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function AgentCard({ agent, player, teamSide, role, status, pickingStyle = "glow" }) {
+export default function AgentCard({
+  agent,
+  player,
+  teamSide,
+  role,
+  status,
+  pickingStyle = "glow",
+}) {
   const agentImagePath = agent
     ? `/valorant/agents/${agent.toLowerCase()}_bust.png`
     : null;
@@ -84,8 +91,10 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
                 className="pointer-events-none absolute inset-0 z-[5] rounded-md"
                 style={{
                   background: `repeating-linear-gradient( to bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 6px, ${teamColor}22 7px, rgba(0,0,0,0) 12px)`,
-                  maskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
-                  WebkitMaskImage: "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
+                  maskImage:
+                    "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, transparent, black 20%, black 80%, transparent)",
                   animation: "scanLines 1.2s linear infinite",
                 }}
               />
@@ -199,42 +208,83 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
           </div>
           <style jsx>{`
             @keyframes pulseGlow {
-              0% { opacity: 0.4; }
-              50% { opacity: 0.9; }
-              100% { opacity: 0; }
+              0% {
+                opacity: 0.4;
+              }
+              50% {
+                opacity: 0.9;
+              }
+              100% {
+                opacity: 0;
+              }
             }
 
             @keyframes sweep {
-              0% { transform: translateX(0); opacity: 0.85; }
-              60% { opacity: 1; }
-              100% { transform: translateX(260%); opacity: 0.85; }
+              0% {
+                transform: translateX(0);
+                opacity: 0.85;
+              }
+              60% {
+                opacity: 1;
+              }
+              100% {
+                transform: translateX(260%);
+                opacity: 0.85;
+              }
             }
 
             @keyframes scanLines {
-              0% { background-position-y: 0px; }
-              100% { background-position-y: 12px; }
+              0% {
+                background-position-y: 0px;
+              }
+              100% {
+                background-position-y: 12px;
+              }
             }
 
             @keyframes radarRotate {
-              0% { transform: translate(-50%, -50%) rotate(0deg); }
-              100% { transform: translate(-50%, -50%) rotate(360deg); }
+              0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+              }
+              100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+              }
             }
 
             @keyframes textFade {
-              0% { opacity: 0; }
-              50% { opacity: 1; }
-              100% { opacity: 0; }
+              0% {
+                opacity: 0;
+              }
+              50% {
+                opacity: 1;
+              }
+              100% {
+                opacity: 0;
+              }
             }
 
             @keyframes gridDrift {
-              0% { background-position: 0 0; }
-              100% { background-position: 16px 16px; }
+              0% {
+                background-position: 0 0;
+              }
+              100% {
+                background-position: 16px 16px;
+              }
             }
 
             @keyframes cornerPulse {
-              0% { opacity: 0.6; filter: drop-shadow(0 0 2px transparent); }
-              50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(255,255,255,0.2)); }
-              100% { opacity: 0.6; filter: drop-shadow(0 0 2px transparent); }
+              0% {
+                opacity: 0.6;
+                filter: drop-shadow(0 0 2px transparent);
+              }
+              50% {
+                opacity: 1;
+                filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+              }
+              100% {
+                opacity: 0.6;
+                filter: drop-shadow(0 0 2px transparent);
+              }
             }
           `}</style>
         </>
@@ -249,8 +299,12 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
               style={{
                 width: "160%",
                 height: "160%",
-                border: `3px solid ${teamSide === "left" ? "#26f8cc" : "#f44b59"}`,
-                boxShadow: `0 0 24px ${teamSide === "left" ? "#26f8cc66" : "#f44b5966"}`,
+                border: `3px solid ${
+                  teamSide === "left" ? "#26f8cc" : "#f44b59"
+                }`,
+                boxShadow: `0 0 24px ${
+                  teamSide === "left" ? "#26f8cc66" : "#f44b5966"
+                }`,
                 animation: "rippleRing 900ms ease-out 1 forwards",
                 opacity: 0.8,
               }}
@@ -260,8 +314,12 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
               style={{
                 width: "130%",
                 height: "130%",
-                border: `2px solid ${teamSide === "left" ? "#26f8cc" : "#f44b59"}`,
-                boxShadow: `0 0 18px ${teamSide === "left" ? "#26f8cc55" : "#f44b5955"}`,
+                border: `2px solid ${
+                  teamSide === "left" ? "#26f8cc" : "#f44b59"
+                }`,
+                boxShadow: `0 0 18px ${
+                  teamSide === "left" ? "#26f8cc55" : "#f44b5955"
+                }`,
                 animation: "rippleRing 900ms ease-out 1 120ms forwards",
                 opacity: 0.85,
               }}
@@ -270,9 +328,18 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
 
           <style jsx>{`
             @keyframes rippleRing {
-              0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.9; }
-              70% { transform: translate(-50%, -50%) scale(1.25); opacity: 0.35; }
-              100% { transform: translate(-50%, -50%) scale(1.6); opacity: 0; }
+              0% {
+                transform: translate(-50%, -50%) scale(0.6);
+                opacity: 0.9;
+              }
+              70% {
+                transform: translate(-50%, -50%) scale(1.25);
+                opacity: 0.35;
+              }
+              100% {
+                transform: translate(-50%, -50%) scale(1.6);
+                opacity: 0;
+              }
             }
           `}</style>
         </>
@@ -317,7 +384,10 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
 
           {/* One-shot reveal wipe when image becomes available */}
           {isImageLoaded && (
-            <div key={revealKey} className="pointer-events-none absolute inset-0 z-[3]">
+            <div
+              key={revealKey}
+              className="pointer-events-none absolute inset-0 z-[3]"
+            >
               <div
                 className="absolute top-0 bottom-0"
                 style={{
@@ -325,7 +395,8 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
                   width: "24%",
                   background: `linear-gradient(90deg, transparent 0%, ${teamColor}55 35%, ${teamColor}aa 50%, ${teamColor}55 65%, transparent 100%)`,
                   filter: "blur(6px)",
-                  animation: "revealWipe 720ms cubic-bezier(0.22, 1, 0.36, 1) 1",
+                  animation:
+                    "revealWipe 720ms cubic-bezier(0.22, 1, 0.36, 1) 1",
                 }}
               />
             </div>
@@ -333,12 +404,22 @@ export default function AgentCard({ agent, player, teamSide, role, status, picki
 
           <style jsx>{`
             @keyframes shimmer {
-              0% { background-position: 200% 0; }
-              100% { background-position: -200% 0; }
+              0% {
+                background-position: 200% 0;
+              }
+              100% {
+                background-position: -200% 0;
+              }
             }
             @keyframes revealWipe {
-              0% { transform: translateX(0); opacity: 0.9; }
-              100% { transform: translateX(260%); opacity: 0; }
+              0% {
+                transform: translateX(0);
+                opacity: 0.9;
+              }
+              100% {
+                transform: translateX(260%);
+                opacity: 0;
+              }
             }
           `}</style>
         </div>
