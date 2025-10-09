@@ -13,7 +13,6 @@ export default function TeamPick({ teamA, teamB, mapPicked }) {
     return () => clearTimeout(timer);
   }, []);
 
-  // ✅ Fallback an toàn để không bị lỗi .map undefined
   const safeTeamA = teamA?.agents?.length
     ? teamA.agents
     : Array(5).fill({ agent: "", player: "Unknown", role: "", status: "picking" });

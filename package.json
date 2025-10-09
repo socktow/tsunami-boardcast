@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "concurrently \"next dev\" \"node server.js\"",
     "build": "next build --turbopack",
     "start": "next start",
     "lint": "eslint"
@@ -27,6 +27,7 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "tailwindcss": "^4"
